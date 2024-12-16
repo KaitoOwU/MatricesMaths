@@ -10,20 +10,25 @@ public class Transform
         set
         {
             _localPosition = value;
-            MatrixFloat vectorToMatrix = new MatrixFloat(1, 4);
-            for (int i = 0; i < 3; i++)
+
+            LocalTranslationMatrix = new(4, 4);
+            for (int i = 0; i < 4; i++)
             {
-                vectorToMatrix[0, i] = value[i];
+                for (int j = 0; j < 4; j++)
+                {
+                    if (i == j)
+                    {
+                        LocalTranslationMatrix[j, i] = 1f;
+                    } else if (i == 3 && j < 3)
+                    {
+                        LocalTranslationMatrix[j, i] = _localPosition[j];
+                    }
+                    else
+                    {
+                        LocalTranslationMatrix[j, i] = 0f;
+                    }
+                }
             }
-            vectorToMatrix[0, 3] = 1f;
-            
-            LocalTranslationMatrix = 
-                MatrixFloat.GenerateAugmentedMatrix(
-                    MatrixFloat.Identity(4).Split(2).matrixA,
-                    vectorToMatrix
-                    );
-            
-            //COMMENTAIRE
         }
     }
 

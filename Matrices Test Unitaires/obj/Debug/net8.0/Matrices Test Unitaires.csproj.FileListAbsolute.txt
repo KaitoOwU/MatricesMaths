@@ -97,3 +97,4 @@ C:\Users\adves\RiderProjects\Matrices Test Unitaires\Matrices Test Unitaires\obj
 C:\Users\adves\RiderProjects\Matrices Test Unitaires\Matrices Test Unitaires\obj\Debug\net8.0\Matrices Test Unitaires.pdb
 C:\Users\adves\RiderProjects\Matrices Test Unitaires\Matrices Test Unitaires\obj\Debug\net8.0\Matrices Test Unitaires.genruntimeconfig.cache
 C:\Users\adves\RiderProjects\Matrices Test Unitaires\Matrices Test Unitaires\obj\Debug\net8.0\ref\Matrices Test Unitaires.dll
+C:\Users\adves\RiderProjects\Matrices Test Unitaires\Matrices Test Unitaires\obj\Debug\net8.0\Matrices Test Unitaires.sourcelink.json
