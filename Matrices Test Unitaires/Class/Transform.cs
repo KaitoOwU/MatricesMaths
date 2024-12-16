@@ -4,6 +4,8 @@ public class Transform
 {
 
     private Vector3 _localPosition;
+    private Vector3 _localRotation;
+    
     public Vector3 LocalPosition
     {
         get => _localPosition;
@@ -32,12 +34,49 @@ public class Transform
         }
     }
 
+    public Vector3 LocalRotation
+    {
+        get => _localRotation;
+        set
+        {
+            _localRotation = value;
+
+            //RotY
+            LocalRotationYMatrix[0, 0] = MathF.Cos(_localRotation.y * (MathF.PI / 180f));
+            LocalRotationYMatrix[0, 2] = MathF.Sin(_localRotation.y * (MathF.PI / 180f));
+            LocalRotationYMatrix[2, 0] = -MathF.Sin(_localRotation.y * (MathF.PI / 180f));
+            LocalRotationYMatrix[2, 2] = MathF.Cos(_localRotation.y * (MathF.PI / 180f));
+            
+            //RotX
+            LocalRotationXMatrix[1, 1] = MathF.Cos(_localRotation.x * (MathF.PI / 180f));
+            LocalRotationXMatrix[1, 2] = -MathF.Sin(_localRotation.x * (MathF.PI / 180f));
+            LocalRotationXMatrix[2, 1] = MathF.Sin(_localRotation.x * (MathF.PI / 180f));
+            LocalRotationXMatrix[2, 2] = MathF.Cos(_localRotation.x * (MathF.PI / 180f));
+            
+            //RotZ
+            LocalRotationZMatrix[0, 0] = MathF.Cos(_localRotation.z * (MathF.PI / 180f));
+            LocalRotationZMatrix[0, 1] = -MathF.Sin(_localRotation.z * (MathF.PI / 180f));
+            LocalRotationZMatrix[1, 0] = MathF.Sin(_localRotation.z * (MathF.PI / 180f));
+            LocalRotationZMatrix[1, 1] = MathF.Cos(_localRotation.z * (MathF.PI / 180f));
+
+            //RotMultiAxis
+            LocalRotationMatrix = LocalRotationYMatrix * LocalRotationXMatrix * LocalRotationZMatrix;
+        }
+    }
+
     public MatrixFloat LocalTranslationMatrix;
+    public MatrixFloat LocalRotationMatrix, LocalRotationXMatrix, LocalRotationYMatrix, LocalRotationZMatrix;
 
     public Transform()
     {
-        LocalPosition = new();
+        _localPosition = new();
         LocalTranslationMatrix = MatrixFloat.Identity(4);
+
+        _localRotation = new();
+        LocalRotationMatrix = MatrixFloat.Identity(4);
+        LocalRotationXMatrix = MatrixFloat.Identity(4);
+        LocalRotationYMatrix = MatrixFloat.Identity(4);
+        LocalRotationZMatrix = MatrixFloat.Identity(4);
     }
     
 }
