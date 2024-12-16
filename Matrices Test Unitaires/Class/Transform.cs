@@ -32,6 +32,9 @@ public class Transform
                     }
                 }
             }
+            
+            LocalToWorldMatrix = LocalTranslationMatrix * LocalRotationMatrix * LocalScaleMatrix;
+            WorldToLocalMatrix = LocalToWorldMatrix.InvertByDeterminant();
         }
     }
 
@@ -62,6 +65,9 @@ public class Transform
 
             //RotMultiAxis
             LocalRotationMatrix = LocalRotationYMatrix * LocalRotationXMatrix * LocalRotationZMatrix;
+            
+            LocalToWorldMatrix = LocalTranslationMatrix * LocalRotationMatrix * LocalScaleMatrix;
+            WorldToLocalMatrix = LocalToWorldMatrix.InvertByDeterminant();
         }
     }
 
@@ -76,12 +82,17 @@ public class Transform
             {
                 LocalScaleMatrix[j, i] = _localScale[i];
             }
+
+            LocalToWorldMatrix = LocalTranslationMatrix * LocalRotationMatrix * LocalScaleMatrix;
+            WorldToLocalMatrix = LocalToWorldMatrix.InvertByDeterminant();
         }
     }
 
     public MatrixFloat LocalTranslationMatrix;
     public MatrixFloat LocalRotationMatrix, LocalRotationXMatrix, LocalRotationYMatrix, LocalRotationZMatrix;
     public MatrixFloat LocalScaleMatrix;
+
+    public MatrixFloat LocalToWorldMatrix, WorldToLocalMatrix;
 
     public Transform()
     {
@@ -96,6 +107,9 @@ public class Transform
 
         _localScale = new(1f, 1f, 1f);
         LocalScaleMatrix = MatrixFloat.Identity(4);
+
+        WorldToLocalMatrix = MatrixFloat.Identity(4);
+        LocalToWorldMatrix = MatrixFloat.Identity(4);
     }
     
 }
