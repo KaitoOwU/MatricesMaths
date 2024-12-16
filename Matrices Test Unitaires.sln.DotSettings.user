@@ -1,0 +1,28 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AAssert_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F46a322d26154b982566e1817203e5452c91223f93b0e392d9c5b4806696fdc1_003FAssert_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AAssert_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F46a322d26154b982566e1817203e5452c91223f93b0e392d9c5b4806696fdc1_003FAssert_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AWorkItem_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003Fd056b4e3b34cd15e21dec611d5b5bbaf85e1f15b445f4e6b3e4dc6634d649042_003FWorkItem_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/ActualSeverity/@EntryValue">ERROR</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=042b6f26_002D2a59_002D4a97_002Da9b8_002D17d3d488b444/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Tests01_NewMatrices" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests01_NewMatrices&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests02_CopyAndModifyMatrices&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests03_IdentityMatrices&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests05_MatricesAddAndSubtract&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests04_ScalarMultiplication&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests06_MatricesMultiplication&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests07_TransposeMatrices&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests08_ElementaryOperations&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests09_AugmentedMatricesAndSplit&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests10_RowReduction.TestApplyRowReduction_CourseExample&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests10_RowReduction&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests11_InvertMatricesUsingRowReduction&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests12_SubMatrices&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests13_Determinants&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests14_AdjugateMatrices&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests15_InvertMatricesUsingDeterminant&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests16_TransformationMatrices&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests17_TransformLocalPosition&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	</wpf:ResourceDictionary>
