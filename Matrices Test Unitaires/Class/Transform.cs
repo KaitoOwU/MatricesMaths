@@ -5,6 +5,7 @@ public class Transform
 
     private Vector3 _localPosition;
     private Vector3 _localRotation;
+    private Vector3 _localScale;
     
     public Vector3 LocalPosition
     {
@@ -64,8 +65,23 @@ public class Transform
         }
     }
 
+    public Vector3 LocalScale
+    {
+        get => _localScale;
+        set
+        {
+            _localScale = value;
+
+            for (int i = 0, j = 0; i < 3 && j < 3; i++, j++)
+            {
+                LocalScaleMatrix[j, i] = _localScale[i];
+            }
+        }
+    }
+
     public MatrixFloat LocalTranslationMatrix;
     public MatrixFloat LocalRotationMatrix, LocalRotationXMatrix, LocalRotationYMatrix, LocalRotationZMatrix;
+    public MatrixFloat LocalScaleMatrix;
 
     public Transform()
     {
@@ -77,6 +93,9 @@ public class Transform
         LocalRotationXMatrix = MatrixFloat.Identity(4);
         LocalRotationYMatrix = MatrixFloat.Identity(4);
         LocalRotationZMatrix = MatrixFloat.Identity(4);
+
+        _localScale = new(1f, 1f, 1f);
+        LocalScaleMatrix = MatrixFloat.Identity(4);
     }
     
 }
