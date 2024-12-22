@@ -30,6 +30,18 @@ public struct Quaternion
             return m;
         }
     }
+
+    public Vector3 EulerAngles
+    {
+        get
+        {
+            float eulerX = MathF.Atan2(2f * (w * x + y * z), 1f - 2f * (x * x + y * y)) * 180f / MathF.PI;
+            float eulerY = MathF.Asin(2f * (w * y - z * x)) * 180f / MathF.PI;
+            float eulerZ = MathF.Atan2(2f * (w * z + x * y), 1f - 2f * (y * y + z * z)) * 180f / MathF.PI;
+
+            return new(eulerX, eulerY, eulerZ);
+        }
+    }
     
     public Quaternion(float x = 0f, float y = 0f, float z = 0f, float w = 1f)
     {
@@ -56,7 +68,7 @@ public struct Quaternion
         Quaternion qInv = new(-q.x, -q.y, -q.z, q.w);
         Quaternion result = q * p * qInv;
         
-        return new Vector3(result.x, result.y, result.z);
+        return new(result.x, result.y, result.z);
     }
 
     public static Quaternion AngleAxis(float angle, Vector3 axis)
@@ -67,6 +79,17 @@ public struct Quaternion
         q.y = axis.y * MathF.Sin(angle * MathF.PI/180f / 2f);
         q.z = axis.z * MathF.Sin(angle * MathF.PI/180f / 2f);
         q.w = MathF.Cos(angle * MathF.PI/180f / 2f);
+
+        return q;
+    }
+    
+    public static Quaternion Euler(float x, float y, float z)
+    {
+        Quaternion q = new();
+        Quaternion qRY = AngleAxis(y, new Vector3(0f, 1f, 0f));
+        Quaternion qRX = AngleAxis(x, new Vector3(1f, 0f, 0f));
+        Quaternion qRZ = AngleAxis(z, new Vector3(0f, 0f, 1f));
+        q = qRY * qRX * qRZ;
 
         return q;
     }
