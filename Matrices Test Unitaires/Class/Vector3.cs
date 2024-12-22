@@ -58,5 +58,11 @@ public class Vector3
     {
         return new(a.x + b.x, a.y + b.y, a.z + b.z);
     } 
+    
+    public Vector3 Normalize()
+    {
+        float length = MathF.Sqrt(x * x + y * y + z * z);
+        return new Vector3(x / length, y / length, z / length);
+    }
 
 }

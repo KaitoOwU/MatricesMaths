@@ -12,4 +12,16 @@ public struct Quaternion
         this.z = z;
         this.w = w;
     }
+
+    public static Quaternion AngleAxis(float angle, Vector3 axis)
+    {
+        Quaternion q = new();
+        axis = axis.Normalize();
+        q.x = axis.x * MathF.Sin(angle * MathF.PI/180f / 2f);
+        q.y = axis.y * MathF.Sin(angle * MathF.PI/180f / 2f);
+        q.z = axis.z * MathF.Sin(angle * MathF.PI/180f / 2f);
+        q.w = MathF.Cos(angle * MathF.PI/180f / 2f);
+
+        return q;
+    }
 }

@@ -27,6 +27,10 @@
     &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests19_TransformLocalScale&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests20_TransformLocalEverything.TestChangeEverythingEverywhereAllAtOnce&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests20_TransformLocalEverything&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests22_TransformChangeWorldPosition&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests23_NewQuaternions&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests21_TransformSetParentAndCheckWorldPosition&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests24_QuaternionsAngleAxis&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=16a5b85a_002D14cc_002D48a9_002Da0d8_002Dec874b1c5bf7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Tests21_TransformSetParentAndCheckWorldPosition" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
