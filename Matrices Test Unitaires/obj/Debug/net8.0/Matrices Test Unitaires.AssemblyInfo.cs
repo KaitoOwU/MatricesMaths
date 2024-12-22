@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Matrices Test Unitaires")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+490a8281d007a8e655f90de79915ca7bd28e550c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+091147719b948e5651b3a5e437c59807a68789be")]
 [assembly: System.Reflection.AssemblyProductAttribute("Matrices Test Unitaires")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Matrices Test Unitaires")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

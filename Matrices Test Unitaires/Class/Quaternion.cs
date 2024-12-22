@@ -4,6 +4,32 @@ public struct Quaternion
 {
     public float x, y, z, w;
     public static Quaternion Identity => new(0f, 0f, 0f, 1f);
+
+    public MatrixFloat Matrix
+    {
+        get
+        {
+            MatrixFloat m = new(4, 4);
+            m[0, 0] = 1f - 2f * (y * y + z * z);
+            m[0, 1] = 2f * (x * y - z * w);
+            m[0, 2] = 2f * (x * z + y * w);
+            m[0, 3] = 0f;
+            m[1, 0] = 2f * (x * y + z * w);
+            m[1, 1] = 1f - 2f * (x * x + z * z);
+            m[1, 2] = 2f * (y * z - x * w);
+            m[1, 3] = 0f;
+            m[2, 0] = 2f * (x * z - y * w);
+            m[2, 1] = 2f * (y * z + x * w);
+            m[2, 2] = 1f - 2f * (x * x + y * y);
+            m[2, 3] = 0f;
+            m[3, 0] = 0f;
+            m[3, 1] = 0f;
+            m[3, 2] = 0f;
+            m[3, 3] = 1f;
+
+            return m;
+        }
+    }
     
     public Quaternion(float x = 0f, float y = 0f, float z = 0f, float w = 1f)
     {
