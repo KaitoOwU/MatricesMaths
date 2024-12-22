@@ -12,6 +12,17 @@ public struct Quaternion
         this.z = z;
         this.w = w;
     }
+    
+    public static Quaternion operator *(Quaternion a, Quaternion b)
+    {
+        Quaternion q = new();
+        q.x = a.w * b.x + a.x * b.w + a.y * b.z - a.z * b.y;
+        q.y = a.w * b.y - a.x * b.z + a.y * b.w + a.z * b.x;
+        q.z = a.w * b.z + a.x * b.y - a.y * b.x + a.z * b.w;
+        q.w = a.w * b.w - a.x * b.x - a.y * b.y - a.z * b.z;
+
+        return q;
+    }
 
     public static Quaternion AngleAxis(float angle, Vector3 axis)
     {
