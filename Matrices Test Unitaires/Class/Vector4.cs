@@ -12,12 +12,12 @@ public class Vector4 : Vector3
         this.w = w;
     }
 
-    public Vector4(Vector3 v)
+    public Vector4(Vector3 v, float w = 0f)
     {
         this.x = v.x;
         this.y = v.y;
         this.z = v.z;
-        this.w = 0f;
+        this.w = w;
     }
 
     public float this[int i]
