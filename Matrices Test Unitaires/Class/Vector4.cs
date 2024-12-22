@@ -1,8 +1,8 @@
 ﻿namespace Maths_Matrices.Tests.Class;
 
-public class Vector4
+public class Vector4 : Vector3
 {
-    public float x, y, z, w;
+    public float w;
 
     public Vector4(float x = 0f, float y = 0f, float z = 0f, float w = 0f)
     {
@@ -10,6 +10,14 @@ public class Vector4
         this.y = y;
         this.z = z;
         this.w = w;
+    }
+
+    public Vector4(Vector3 v)
+    {
+        this.x = v.x;
+        this.y = v.y;
+        this.z = v.z;
+        this.w = 0f;
     }
 
     public float this[int i]
@@ -56,4 +64,9 @@ public class Vector4
             throw new IndexOutOfRangeException();
         }
     }
+    
+    public static Vector4 operator +(Vector4 a, Vector4 b)
+    {
+        return new(a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w);
+    } 
 }

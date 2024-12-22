@@ -1,4 +1,6 @@
-﻿namespace Maths_Matrices.Tests.Class;
+﻿using System.Runtime;
+
+namespace Maths_Matrices.Tests.Class;
 
 public class Transform
 {
@@ -6,6 +8,7 @@ public class Transform
     private Vector3 _localPosition;
     private Vector3 _localRotation;
     private Vector3 _localScale;
+    private Transform _parent;
     
     public Vector3 LocalPosition
     {
@@ -88,6 +91,8 @@ public class Transform
         }
     }
 
+    public Vector3 WorldPosition => new(LocalToWorldMatrix[0, 3], LocalToWorldMatrix[1, 3], LocalToWorldMatrix[2, 3]);
+
     public MatrixFloat LocalTranslationMatrix;
     public MatrixFloat LocalRotationMatrix, LocalRotationXMatrix, LocalRotationYMatrix, LocalRotationZMatrix;
     public MatrixFloat LocalScaleMatrix;
@@ -110,6 +115,14 @@ public class Transform
 
         WorldToLocalMatrix = MatrixFloat.Identity(4);
         LocalToWorldMatrix = MatrixFloat.Identity(4);
+    }
+
+    public void SetParent(Transform parent)
+    {
+        this._parent = parent;
+        
+        this.LocalToWorldMatrix = parent.LocalToWorldMatrix * this.LocalToWorldMatrix;
+        this.WorldToLocalMatrix = LocalToWorldMatrix.InvertByDeterminant();
     }
     
 }
