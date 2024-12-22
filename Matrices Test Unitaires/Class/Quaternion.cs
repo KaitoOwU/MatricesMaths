@@ -23,6 +23,15 @@ public struct Quaternion
 
         return q;
     }
+    
+    public static Vector3 operator *(Quaternion q, Vector3 v)
+    {
+        Quaternion p = new(v.x, v.y, v.z, 0f);
+        Quaternion qInv = new(-q.x, -q.y, -q.z, q.w);
+        Quaternion result = q * p * qInv;
+        
+        return new Vector3(result.x, result.y, result.z);
+    }
 
     public static Quaternion AngleAxis(float angle, Vector3 axis)
     {
