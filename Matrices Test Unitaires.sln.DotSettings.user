@@ -35,6 +35,8 @@
     &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests26_QuaternionsPointRotation&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests27_QuaternionsMatrix&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests29_TransformGetLocalRotationAsQuaternion&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests30_TransformSetLocalRotationAsQuaternion&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::92134080-AEE7-4CC9-BA8A-4C29F5D870C4::net8.0::Maths_Matrices.Tests.Tests28_QuaternionsEulerConversions&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=16a5b85a_002D14cc_002D48a9_002Da0d8_002Dec874b1c5bf7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Tests21_TransformSetParentAndCheckWorldPosition" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;

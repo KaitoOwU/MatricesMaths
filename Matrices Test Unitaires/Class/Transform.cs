@@ -51,8 +51,16 @@ public class Transform
             UpdateMatrices();
         }
     }
-    
-    public Quaternion LocalRotationQuaternion => Quaternion.Euler(_localRotation.x, _localRotation.y, _localRotation.z);
+
+    public Quaternion LocalRotationQuaternion
+    {
+        get => Quaternion.Euler(_localRotation.x, _localRotation.y, _localRotation.z);
+        set
+        {
+            _localRotation = value.EulerAngles;
+            UpdateMatrices();
+        }
+    }
 
     public MatrixFloat LocalTranslationMatrix;
     public MatrixFloat LocalRotationMatrix, LocalRotationXMatrix, LocalRotationYMatrix, LocalRotationZMatrix;

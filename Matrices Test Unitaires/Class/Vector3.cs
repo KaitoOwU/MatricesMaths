@@ -57,7 +57,12 @@ public class Vector3
     public static Vector3 operator +(Vector3 a, Vector3 b)
     {
         return new(a.x + b.x, a.y + b.y, a.z + b.z);
-    } 
+    }
+
+    public static Vector3 operator *(Vector3 a, float b)
+    {
+        return new(a.x * b, a.y * b, a.z * b);
+    }
     
     public Vector3 Normalize()
     {

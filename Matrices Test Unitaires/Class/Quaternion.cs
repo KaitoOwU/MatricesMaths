@@ -35,11 +35,23 @@ public struct Quaternion
     {
         get
         {
-            float eulerX = MathF.Atan2(2f * (w * x + y * z), 1f - 2f * (x * x + y * y)) * 180f / MathF.PI;
-            float eulerY = MathF.Asin(2f * (w * y - z * x)) * 180f / MathF.PI;
-            float eulerZ = MathF.Atan2(2f * (w * z + x * y), 1f - 2f * (y * y + z * z)) * 180f / MathF.PI;
+            var matrix = Matrix;
+            float pitch = MathF.Asin(-matrix[1, 2]);
+            
+            float heading;
+            float banking;
+            if (MathF.Abs(MathF.Cos(pitch)) > 0.001d) 
+            {
+                heading = MathF.Atan2(matrix[0, 2], matrix[2, 2]);
+                banking = MathF.Atan2(matrix[1, 0], matrix[1, 1]);
+            }
+            else
+            {
+                heading = MathF.Atan2(-matrix[2, 0], matrix[0, 0]);
+                banking = 0f;
+            }
 
-            return new(eulerX, eulerY, eulerZ);
+            return new Vector3(pitch, heading, banking) * (180 / MathF.PI);
         }
     }
     
